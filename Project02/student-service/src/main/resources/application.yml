@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: student-service
+  jackson:
+    default-property-inclusion: non_null
+    property-naming-strategy: SNAKE_CASE
+  datasource:
+    url: ${HOST_DATABASE}
+    username: ${USERNAME_DATABASE}
+    password: ${PASSWORD_DATABASE}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create #Destroy previous data
+logging:
+  level:
+    org.hibernate.sql: debug
